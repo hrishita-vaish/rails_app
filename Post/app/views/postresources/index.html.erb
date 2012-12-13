@@ -1,0 +1,27 @@
+<h1>Listing postresources</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @postresources.each do |postresource| %>
+  <tr>
+    <td><%= postresource.name %></td>
+    <td><%= postresource.title %></td>
+    <td><%= postresource.content %></td>
+    <td><%= link_to 'Show', postresource %></td>
+    <td><%= link_to 'Edit', edit_postresource_path(postresource) %></td>
+    <td><%= link_to 'Destroy', postresource, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Postresource', new_postresource_path %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @postresource.name %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @postresource.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @postresource.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_postresource_path(@postresource) %> |
+<%= link_to 'Back', postresources_path %>
